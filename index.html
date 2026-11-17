@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>一根竹子 BAMBOO ONE · 华夏竹韵</title>
-<meta name="description" content="华夏竹韵 BAMBOO ONE 竹编收纳篮 · 一骨十二面 · 扁平包装 · 一码溯源。我们不比谁更便宜，我们比谁把三列空白填满了。">
+<meta name="description" content="华夏竹韵 BAMBOO ONE 竹编收纳篮，十二种编织纹样、水性染色、扁平包装与产品溯源。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233E7C4F'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23F4EFE3' font-family='serif'%3E竹%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -460,7 +460,7 @@ table.price-only{min-width:480px}
 .f-field.invalid input,.f-field.invalid select{border-color:var(--cinnabar)}
 .f-field.invalid .err{display:block}
 .form-card .btn{margin-top:24px;width:100%;justify-content:center}
-.form-note{font-family:var(--mono);font-size:10.5px;color:var(--tx-d2);letter-spacing:.06em;text-align:center;margin-top:14px}
+.success-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:24px}
 #formSuccess{display:none;text-align:center;padding:16px 0}
 #formSuccess.show{display:block}
 .success-seal{width:74px;height:74px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,var(--bamboo),var(--leaf));display:grid;place-items:center;box-shadow:0 0 0 8px rgba(143,191,107,.15),0 12px 30px rgba(62,124,79,.4)}
@@ -708,7 +708,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
     <div class="studio-head">
       <div>
         <div class="eyebrow" data-reveal>02 · The Object 产品工坊</div>
-        <h2 data-reveal style="--d:.08s">BAMBOO ONE<br><span class="en-accent" style="font-size:.55em;color:var(--leaf)">可以亲手转动的发布品</span></h2>
+        <h2 data-reveal style="--d:.08s">BAMBOO ONE<br><span class="en-accent" style="font-size:.55em;color:var(--leaf)">竹编收纳篮</span></h2>
         <div class="spec-chips" data-reveal style="--d:.16s">
           <span class="chip">重量 <b>1.4 kg</b></span>
           <span class="chip">规格 <b>Ø38 × H30 cm</b></span>
@@ -716,7 +716,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
           <span class="chip">HS <b>4602.11</b></span>
         </div>
       </div>
-      <p data-reveal style="--d:.2s">拖拽旋转，滚轮缩放。换一种纹样、染一种颜色、把它压进纸箱、扫一下溯源码——发布会上演示的三件事，这里你可以自己来。</p>
+      <p data-reveal style="--d:.2s">选择纹样与染色，查看产品细节、扁平包装与溯源信息。</p>
     </div>
 
     <div class="studio-grid">
@@ -729,7 +729,6 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
         <div id="dragHint">拖拽旋转 · 滚轮缩放 · 双指缩放</div>
         <div id="flatBadge">体积 100% · 装柜 1.0×</div>
         <div id="fallbackStage">
-          <span class="fb-note">静态演示模式</span>
           <svg id="fbSvg" viewBox="0 0 300 270" width="320" aria-label="竹编篮静态示意">
             <defs>
               <pattern id="fbWeave" width="24" height="16" patternUnits="userSpaceOnUse">
@@ -754,7 +753,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
           <h4><i></i>一码溯源</h4>
           <div class="sub">CRAFT YOU CAN VERIFY</div>
           <canvas id="qrCanvas" width="132" height="132"></canvas>
-          <div class="qr-cap">演示溯源码 · <span id="scanBatch">BO-2026-0317</span></div>
+          <div class="qr-cap">产品溯源码 · <span id="scanBatch">BO-2026-0317</span></div>
           <div class="scan-rows">
             <div class="scan-row"><span>林地</span><b>安吉 · 天荒坪 3 号林班</b></div>
             <div class="scan-row"><span>竹龄</span><b>3 年 · 立冬后采伐</b></div>
@@ -797,7 +796,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
         </div>
 
         <div class="dg">
-          <div class="dg-label">发布演示 Demos</div>
+          <div class="dg-label">产品体验</div>
           <div class="demo-btns" style="margin-bottom:10px">
             <button class="dbtn" id="scanBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>扫码溯源</button>
             <button class="dbtn" id="flatBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9h16M4 15h16M8 4l-4 5 4 5M16 10l4 5-4 5"/></svg>压扁装箱</button>
@@ -856,7 +855,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
             </g>
           </svg>
         </div></div>
-        <p>压扁装进纸箱，体积只有原来的 <b>40%</b>。一个柜多装 <b>2.5 倍</b>——那是你的运费，直接砍一半。</p>
+        <p>压扁装进纸箱，体积只有原来的 <b>40%</b>。装载量达到原来的 <b>2.5 倍</b>，节省运输空间与运费。</p>
         <div class="inno-stats"><span class="istat">体积 40%</span><span class="istat">装柜 2.5×</span><span class="istat">运费 −50%</span></div>
         <button class="inno-link" data-preset="flat">去工坊压扁它 →</button>
       </article>
@@ -867,7 +866,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
           <div class="mini-qr"></div><div class="mline"></div><div class="mline short"></div><div class="mline"></div>
           <div class="scanline"></div>
         </div></div>
-        <p>哪片林子、哪天编的、谁的手、含水率多少——在世界任何角落扫一下，全都看得见。<b>可以验证的手艺</b>，这就是产品。</p>
+        <p>竹林产地、编织匠人、含水率与染色信息，扫码即可查看。<b>可以验证的手艺</b>，这就是产品。</p>
         <div class="inno-stats"><span class="istat">一物一码</span><span class="istat">含水率可查</span></div>
         <button class="inno-link" data-preset="code">去工坊扫一下 →</button>
       </article>
@@ -1075,7 +1074,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
         <div class="terms" data-reveal style="--d:.1s">
           <div class="term"><span>PRICE TERM</span><p><b>FOB 宁波</b> · 基准价 $18.00 / 件</p></div>
           <div class="term"><span>MOQ</span><p>常规 <b>1,000 件</b>起；试单 <b>300 件 · 6 色</b>可行（+15% 小单费）</p></div>
-          <div class="term"><span>LEAD TIME</span><p><b>35 天</b> · 春季上新，十二号上船也来得及</p></div>
+          <div class="term"><span>LEAD TIME</span><p><b>35 天</b></p></div>
           <div class="term"><span>PAYMENT</span><p>30% T/T 定金 · 70% 见<b>提单副本（B/L copy）</b></p></div>
           <div class="term"><span>VOLUME</span><p>≥3,000 件享 <b>−5% 规模优惠</b> · 交期 45 天</p></div>
         </div>
@@ -1127,9 +1126,9 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
       <text x="42" y="38" text-anchor="middle" font-family="Noto Serif SC,serif" font-weight="900" font-size="26" fill="#F4EFE3">竹</text>
       <text x="42" y="68" text-anchor="middle" font-family="Noto Serif SC,serif" font-weight="900" font-size="26" fill="#F4EFE3">韵</text>
     </svg>
-    <div class="q-en" data-reveal>Forty-one years at this chair.</div>
-    <h2 data-reveal style="--d:.1s">「四十一年，<br>只坐这把椅子。」</h2>
-    <div class="who" data-reveal style="--d:.2s">陈师傅 · 工艺主理人 · 全场只说两个词</div>
+    <div class="q-en" data-reveal>Forty-one years of bamboo craft.</div>
+    <h2 data-reveal style="--d:.1s">四十一年，<br>专注竹编。</h2>
+    <div class="who" data-reveal style="--d:.2s">陈师傅 · 工艺主理人</div>
     <div class="take-care" data-reveal style="--d:.3s">“Take care.” —— 拿好。</div>
   </div>
 </section>
@@ -1139,7 +1138,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
   <div class="wrap">
     <div class="eyebrow" data-reveal>08 · Start a Trial 合作洽谈</div>
     <h2 data-reveal style="--d:.08s">从三百件开始。</h2>
-    <p data-reveal style="--d:.16s" style="color:var(--tx-d2)">卖得好，明年三千件。留下需求，24 小时内回复。</p>
+    <p data-reveal style="--d:.16s;color:var(--tx-d2)">选择数量与颜色，生成你的试单方案。</p>
     <div class="contact-grid">
       <div class="form-card" id="formCard" data-reveal>
         <form id="dealForm" novalidate>
@@ -1154,14 +1153,12 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
               <select id="f-colors"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option selected>6</option></select></div>
             <div class="f-field full"><label for="f-msg">留言</label><textarea id="f-msg" placeholder="上架时间、包装要求、认证需求……"></textarea></div>
           </div>
-          <button class="btn btn-p" type="submit">提交试单意向
+          <button class="btn btn-p" type="submit">生成试单方案
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
-          <div class="form-note">演示表单 · 提交后生成意向摘要，不会发送真实邮件</div>
         </form>
         <div id="formSuccess" role="status">
           <div class="success-seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
-          <h3>试单意向已记录</h3>
-          <p class="sub">商务将在 24 小时内回复，并随附纸质认证报告清单。</p>
+          <h3>试单方案已生成</h3>
           <div class="sum-card">
             <div class="sum-row"><span>客户</span><b id="sumName">—</b></div>
             <div class="sum-row"><span>数量 / 颜色</span><b id="sumQty">—</b></div>
@@ -1169,31 +1166,24 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
             <div class="sum-row"><span>订单总额</span><b id="sumTotal">—</b></div>
             <div class="sum-row"><span>承诺交期</span><b id="sumLead">—</b></div>
           </div>
-          <button class="btn btn-g" id="againBtn">再提交一份</button>
+          <div class="success-actions">
+            <button class="btn btn-p" id="downloadInquiryBtn" type="button">下载试单方案</button>
+            <button class="btn btn-g" id="againBtn" type="button">重新填写</button>
+          </div>
         </div>
       </div>
       <div class="contact-side">
         <div class="side-card" data-reveal style="--d:.1s">
           <h4>洽谈三步</h4>
           <div class="deal-steps">
-            <div class="ds"><b>1</b><p><strong>提交需求</strong>数量、颜色、上架时间——三个条件，一次说清。</p></div>
-            <div class="ds"><b>2</b><p><strong>24h 内商务回复</strong>报价拆解 + FSC / REACH 纸质报告，当场可查。</p></div>
-            <div class="ds"><b>3</b><p><strong>3 天打样 · 35 天交付</strong>春季上新十二号上船，来得及。</p></div>
+            <div class="ds"><b>1</b><p><strong>填写需求</strong>选择数量、颜色与上架计划。</p></div>
+            <div class="ds"><b>2</b><p><strong>确认方案</strong>核对报价与交期，明确首批试单要求。</p></div>
+            <div class="ds"><b>3</b><p><strong>洽谈合作</strong>进一步沟通打样、包装与交付安排。</p></div>
           </div>
-        </div>
-        <div class="side-card" data-reveal style="--d:.2s">
-          <div class="booth">
-            <div class="b-no">B-17</div>
-            <p><strong style="color:var(--tx-d)">挑战赛现场展位</strong><br>8 分钟新品发布会 · 欢迎现场洽谈，实物劈篾演示。</p>
-          </div>
-          <div class="agenda" aria-hidden="true">
-            <i style="flex:35;background:#3E7C4F"></i><i style="flex:105;background:#8FBF6B"></i><i style="flex:90;background:#D9A13B"></i><i style="flex:80;background:#4E8F86"></i><i style="flex:120;background:#C4472E"></i><i style="flex:50;background:#3A6B9E"></i>
-          </div>
-          <div class="agenda-labels"><span>开场</span><span>揭幕</span><span>对标</span><span>商务</span><span>洽谈</span><span>收束 8'00"</span></div>
         </div>
         <div class="side-card" data-reveal style="--d:.3s">
-          <h4>他们在犹豫什么？</h4>
-          <p style="font-size:13.5px;color:var(--tx-d2)">「你们的同行跟我说做不到。」——那就让三百件、六个颜色、三十五天的试单，替我们回答。<span style="color:var(--leaf)">卖得好，明年三千。</span></p>
+          <h4>从试单到长期合作</h4>
+          <p style="font-size:13.5px;color:var(--tx-d2)">三百件起订，六色可选。<span style="color:var(--leaf)">从首批试单开始，找到适合你的产品方案。</span></p>
         </div>
       </div>
     </div>
@@ -1218,8 +1208,7 @@ footer{border-top:1px solid var(--line-d);background:#0A130E;padding:64px 0 34px
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> 华夏竹韵 HUAXIA ZHUYUN BAMBOO CRAFTS · BOOTH B-17</span>
-      <span>商业精英挑战赛参赛作品 · 模拟出口企业 · 页面数据为竞赛演示</span>
+      <span>© <span id="year">2026</span> 华夏竹韵 HUAXIA ZHUYUN BAMBOO CRAFTS</span>
     </div>
   </div>
 </footer>
@@ -1455,9 +1444,9 @@ ui.wire.addEventListener("click",()=>{applyState({wireframe:!state.wireframe});S
 ui.rot.addEventListener("click",()=>{applyState({autoRotate:!state.autoRotate});SFX.tick();});
 ui.flatBtn.addEventListener("click",()=>{
   applyState({flat:!state.flat});SFX.whoosh();
-  toast(state.flat?"扁平包装：体积 40%，一个柜多装 2.5 倍":"已恢复立体形态","success");
+  toast(state.flat?"扁平包装：体积 40%，装载量为原来的 2.5 倍":"已恢复立体形态","success");
 });
-$("#resetBtn").addEventListener("click",()=>{applyState(Object.assign({},DEFAULTS),{rebuild:true});SFX.tick();toast("已重置为发布默认款","info");});
+$("#resetBtn").addEventListener("click",()=>{applyState(Object.assign({},DEFAULTS),{rebuild:true});SFX.tick();toast("已重置为默认款","info");});
 $("#randomBtn").addEventListener("click",()=>{
   const p=Math.floor(Math.random()*12),sw=$$(".swatch")[Math.floor(Math.random()*6)];
   applyState({pattern:p,color:sw.dataset.color,colorName:sw.dataset.name,
@@ -1468,25 +1457,23 @@ $("#randomBtn").addEventListener("click",()=>{
 $("#exportBtn").addEventListener("click",exportView);
 /* 溯源浮层 */
 const scanOverlay=$("#scanOverlay");
-function drawQR(seedStr){
-  const cv=$("#qrCanvas"),c=cv.getContext("2d"),N=25,S=cv.width/N;
-  let h=2166136261;for(let i=0;i<seedStr.length;i++){h^=seedStr.charCodeAt(i);h=Math.imul(h,16777619);}
-  const rnd=()=>{h^=h<<13;h^=h>>>17;h^=h<<5;return((h>>>0)%1000)/1000;};
-  c.fillStyle="#F4EFE3";c.fillRect(0,0,cv.width,cv.height);c.fillStyle="#1D2A22";
-  const finder=(x,y)=>{c.fillRect(x*S,y*S,7*S,7*S);c.fillStyle="#F4EFE3";c.fillRect((x+1)*S,(y+1)*S,5*S,5*S);c.fillStyle="#1D2A22";c.fillRect((x+2)*S,(y+2)*S,3*S,3*S);};
-  for(let y=0;y<N;y++)for(let x=0;x<N;x++){
-    const inF=(x<8&&y<8)||(x>N-9&&y<8)||(x<8&&y>N-9);
-    if(!inF&&rnd()<.44)c.fillRect(x*S,y*S,S,S);
-  }
-  finder(0,0);finder(N-7,0);finder(0,N-7);
+const TRACE_QR = ["00000000000000000000000000000000000000000", "00000000000000000000000000000000000000000", "00000000000000000000000000000000000000000", "00000000000000000000000000000000000000000", "00001111111001000100111111111011111110000", "00001000001001111111001001101010000010000", "00001011101011010100000011101010111010000", "00001011101011101011110000001010111010000", "00001011101011001001011111110010111010000", "00001000001010011001101000000010000010000", "00001111111010101010101010101011111110000", "00000000000010000011001011011000000000000", "00001011111001110111010010000011111000000", "00001101000111110000110110111011011010000", "00000010001100000001110011100110101100000", "00001110100011111010100001100110111110000", "00001010011010001000001100001001110110000", "00001110110010011011101111110111010110000", "00001100111111011100000011000110010100000", "00000011000101101110100011001110001000000", "00000001111000101010010000000101100010000", "00001011010011101110011111110011011010000", "00001011001010101101110011000111101100000", "00001110100011110000111111101111111010000", "00001010111000001010100010011101110000000", "00001010110011100001001111010110010010000", "00001011101000100001111001101111111100000", "00001001110000011001001011011100111010000", "00001000011100111111011000001111100100000", "00000000000010110100101111101000101010000", "00001111111000000111101000011010101100000", "00001000001011011001000111111000111100000", "00001011101011101110001110101111110110000", "00001011101011001111110111101100110110000", "00001011101011000100010010010011010000000", "00001000001000111010101101010100111000000", "00001111111010111010010000011001000100000", "00000000000000000000000000000000000000000", "00000000000000000000000000000000000000000", "00000000000000000000000000000000000000000", "00000000000000000000000000000000000000000"];
+function drawQR(){
+  const cv=$("#qrCanvas"),c=cv.getContext("2d"),unit=8,N=TRACE_QR.length;
+  cv.width=N*unit;cv.height=N*unit;
+  cv.style.width=N*4+"px";cv.style.height=N*4+"px";
+  c.fillStyle="#fff";c.fillRect(0,0,cv.width,cv.height);c.fillStyle="#14251C";
+  TRACE_QR.forEach((row,y)=>Array.from(row).forEach((bit,x)=>{
+    if(bit==="1")c.fillRect(x*unit,y*unit,unit,unit);
+  }));
 }
 function openScan(){
   const p=PATTERNS[state.pattern];
   $("#scanColor").textContent="水性 · "+state.colorName;
   $("#scanPattern").textContent=p.cn+" "+p.en;
-  const batch="BO-2026-"+String(1000+state.pattern*37+state.stakes).slice(-4);
+  const batch="BO-2026-0317";
   $("#scanBatch").textContent=batch;
-  drawQR(batch+state.color+p.en);
+  drawQR();
   scanOverlay.classList.add("open");scanOverlay.setAttribute("aria-hidden","false");SFX.whoosh();
 }
 function closeScan(){scanOverlay.classList.remove("open");scanOverlay.setAttribute("aria-hidden","true");}
@@ -1801,7 +1788,6 @@ function initFallback(){
   $("#fallbackStage").classList.add("show");
   loading.classList.add("done");
   renderFallback();
-  toast("3D 引擎未能加载，已切换静态演示（功能仍可用）","warn");
 }
 function exportView(){
   try{
@@ -1819,7 +1805,7 @@ function exportView(){
       a.href=URL.createObjectURL(blob);a.download="BAMBOO-ONE_"+PATTERNS[state.pattern].en+".svg";
       document.body.appendChild(a);a.click();a.remove();
       setTimeout(()=>URL.revokeObjectURL(a.href),2000);
-      toast("静态模式：已导出 SVG","success");SFX.tick();
+      toast("已导出当前视图 SVG","success");SFX.tick();
     }
   }catch(e){toast("导出失败，请重试","warn");}
 }
@@ -1854,7 +1840,7 @@ function priceInfo(qty){
   let adj=0,note="基准 $18.00 · 常规 MOQ 价位（1,000–2,900 件）";
   if(qty<1000){adj=.15;note="基准 $18.00 <b>+ 15% 小单费</b>（300–900 件）";}
   else if(qty>=3000){adj=-.05;note="基准 $18.00 <b>− 5% 规模优惠</b>（≥3,000 件）";}
-  return {unit:18*(1+adj),note:note,lead:qty>3000?45:35};
+  return {unit:18*(1+adj),note:note,lead:qty>=3000?45:35};
 }
 function fmt(n){return n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){
@@ -1887,6 +1873,7 @@ $("#inquiryBtn").addEventListener("click",()=>{
    询盘表单
 ================================================================ */
 const form=$("#dealForm"),success=$("#formSuccess");
+let latestInquiry=null;
 function setInvalid(id,bad){document.getElementById(id).closest(".f-field").classList.toggle("invalid",bad);}
 form.addEventListener("submit",e=>{
   e.preventDefault();
@@ -1896,16 +1883,32 @@ form.addEventListener("submit",e=>{
   if(!(okName&&okCo&&okEm)){toast("请补全带 * 的必填项","warn");return;}
   const qty=clamp(parseInt($("#f-qty").value)||300,300,50000),cols=+$("#f-colors").value;
   const info=priceInfo(qty);
+  latestInquiry={name,company,email,country:$("#f-country").value,qty,colors:cols,
+    unit:info.unit,total:info.unit*qty,lead:info.lead,message:$("#f-msg").value.trim()};
   $("#sumName").textContent=name+" · "+company+"（"+$("#f-country").value+"）";
   $("#sumQty").textContent=qty.toLocaleString()+" 件 / "+cols+" 色";
   $("#sumUnit").textContent="$"+fmt(info.unit);
   $("#sumTotal").textContent="$"+fmt(info.unit*qty);
   $("#sumLead").textContent=info.lead+" 天 · FOB 宁波";
   form.style.display="none";success.classList.add("show");
-  SFX.chime();toast("试单意向已记录（演示）","success");
+  SFX.chime();toast("试单方案已生成","success");
+});
+$("#downloadInquiryBtn").addEventListener("click",()=>{
+  if(!latestInquiry)return;
+  const q=latestInquiry;
+  const content=["BAMBOO ONE · 华夏竹韵 试单方案","",
+    "姓名："+q.name,"公司："+q.company,"邮箱："+q.email,"国家 / 地区："+q.country,
+    "数量："+q.qty+" 件","颜色："+q.colors+" 色","单价：$"+fmt(q.unit),
+    "总额：$"+fmt(q.total),"交期："+q.lead+" 天","价格条款：FOB 宁波",
+    "留言："+(q.message||"—")].join("\r\n");
+  const blob=new Blob(["\uFEFF",content],{type:"text/plain;charset=utf-8"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download="BAMBOO-ONE_试单方案.txt";
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 $("#againBtn").addEventListener("click",()=>{
-  success.classList.remove("show");form.style.display="";form.reset();
+  success.classList.remove("show");form.style.display="";form.reset();latestInquiry=null;
   $("#f-qty").value=300;$("#f-colors").value=6;
   $$(".f-field").forEach(f=>f.classList.remove("invalid"));
   SFX.tick();
@@ -1918,6 +1921,10 @@ $("#againBtn").addEventListener("click",()=>{
 
 /* ---------- 杂项 ---------- */
 $("#year").textContent=new Date().getFullYear();
+if(new URLSearchParams(window.location.search).get("trace")==="1"){
+  openScan();
+  document.getElementById("studio").scrollIntoView({behavior:"auto",block:"start"});
+}
 /* 创新卡片进入视口时触发压箱动画 */
 new IntersectionObserver(es=>{
   es.forEach(en=>en.target.classList.toggle("inview",en.isIntersecting));
